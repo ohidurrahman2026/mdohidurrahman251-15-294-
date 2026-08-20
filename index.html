@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Java Programming Problems - Week 1 to Week 5</title>
+    <title>Java Programming - Week 1 to Week 5</title>
 
     <style>
         * {
@@ -22,8 +21,8 @@
         header {
             background: #24292f;
             color: white;
-            padding: 30px 20px;
             text-align: center;
+            padding: 30px 15px;
         }
 
         header h1 {
@@ -37,7 +36,7 @@
         }
 
         .container {
-            width: 95%;
+            width: 94%;
             max-width: 1200px;
             margin: 30px auto;
         }
@@ -49,23 +48,23 @@
         .week-title {
             background: #0969da;
             color: white;
-            padding: 14px 18px;
+            padding: 15px 20px;
             border-radius: 8px 8px 0 0;
-            font-size: 22px;
+            font-size: 23px;
             font-weight: bold;
         }
 
         .problem {
             background: white;
-            margin-bottom: 20px;
+            margin-bottom: 18px;
             border-radius: 0 0 8px 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
             overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
         }
 
         .problem-title {
-            padding: 15px 18px;
-            background: #eaeef2;
+            background: #e9edf2;
+            padding: 15px 20px;
             font-size: 18px;
             font-weight: bold;
         }
@@ -79,18 +78,19 @@
             font-size: 14px;
             line-height: 1.6;
             white-space: pre-wrap;
+            word-wrap: break-word;
         }
 
         code {
             font-family: Consolas, "Courier New", monospace;
         }
 
+        .loading {
+            color: #8b949e;
+        }
+
         .error {
-            color: #cf222e;
-            background: #ffebe9;
-            padding: 15px;
-            margin: 15px;
-            border-radius: 5px;
+            color: #ff7b72;
         }
 
         footer {
@@ -105,237 +105,544 @@
 
 <header>
     <h1>Java Programming Problems</h1>
-    <p>Week 1 - Week 5 | Java OOP Practice</p>
+    <p>Week 1 - Week 5</p>
 </header>
 
 <div class="container">
 
-    <!-- WEEK 1 -->
-    <div class="week">
-        <div class="week-title">Week 1</div>
+    <!-- ================= WEEK 1 ================= -->
 
-        <div class="problem">
-            <div class="problem-title">1. Welcome to Java</div>
-            <pre><code id="code1">Loading...</code></pre>
+    <section class="week">
+
+        <div class="week-title">
+            Week 1
         </div>
 
+        <!-- 1 -->
         <div class="problem">
-            <div class="problem-title">2. If-Else</div>
-            <pre><code id="code2">Loading...</code></pre>
+
+            <div class="problem-title">
+                1. Welcome to Java
+            </div>
+
+            <pre><code>public class Solution {
+
+    public static void main(String[] args) {
+
+        System.out.println("Hello, World.");
+        System.out.println("Hello, Java.");
+
+    }
+}</code></pre>
+
         </div>
 
+
+        <!-- 2 -->
         <div class="problem">
-            <div class="problem-title">3. Java Stdin and Stdout</div>
-            <pre><code id="code3">Loading...</code></pre>
-        </div>
-    </div>
 
+            <div class="problem-title">
+                2. If-Else
+            </div>
 
-    <!-- WEEK 2 -->
-    <div class="week">
-        <div class="week-title">Week 2</div>
+            <pre><code>import java.util.Scanner;
 
-        <div class="problem">
-            <div class="problem-title">1. Java Instanceof Keyword</div>
-            <pre><code id="code4">Loading...</code></pre>
-        </div>
+public class Main {
 
-        <div class="problem">
-            <div class="problem-title">2. Java Singleton Pattern</div>
-            <pre><code id="code5">Loading...</code></pre>
-        </div>
+    public static void main(String[] args) {
 
-        <div class="problem">
-            <div class="problem-title">3. Java Static Initializer Block</div>
-            <pre><code id="code6">Loading...</code></pre>
-        </div>
+        Scanner scanner = new Scanner(System.in);
 
-        <div class="problem">
-            <div class="problem-title">4. Salary</div>
-            <pre><code id="code7">Loading...</code></pre>
-        </div>
-    </div>
+        int n = scanner.nextInt();
 
+        scanner.close();
 
-    <!-- WEEK 3 -->
-    <div class="week">
-        <div class="week-title">Week 3</div>
+        if (n % 2 != 0) {
 
-        <div class="problem">
-            <div class="problem-title">1. Salary Increase</div>
-            <pre><code id="code8">Loading...</code></pre>
-        </div>
+            System.out.println("Weird");
 
-        <div class="problem">
-            <div class="problem-title">2. Salary with Bonus</div>
-            <pre><code id="code9">Loading...</code></pre>
-        </div>
-    </div>
+        } else if (n >= 2 && n <= 5) {
 
+            System.out.println("Not Weird");
 
-    <!-- WEEK 4 -->
-    <div class="week">
-        <div class="week-title">Week 4</div>
+        } else if (n >= 6 && n <= 20) {
 
-        <div class="problem">
-            <div class="problem-title">1. Inheritance</div>
-            <pre><code id="code10">Loading...</code></pre>
+            System.out.println("Weird");
+
+        } else {
+
+            System.out.println("Not Weird");
+
+        }
+    }
+}</code></pre>
+
         </div>
 
+
+        <!-- 3 -->
         <div class="problem">
-            <div class="problem-title">2. Java Inheritance II</div>
-            <pre><code id="code11">Loading...</code></pre>
+
+            <div class="problem-title">
+                3. Java Stdin and Stdout
+            </div>
+
+            <pre><code id="week1_3" class="loading">
+Loading...
+            </code></pre>
+
         </div>
 
-        <div class="problem">
-            <div class="problem-title">3. Java Inheritance</div>
-            <pre><code id="code12">Loading...</code></pre>
-        </div>
-    </div>
+    </section>
 
 
-    <!-- WEEK 5 -->
-    <div class="week">
-        <div class="week-title">Week 5</div>
 
-        <div class="problem">
-            <div class="problem-title">1. Covariant Return Types</div>
-            <pre><code id="code13">Loading...</code></pre>
+    <!-- ================= WEEK 2 ================= -->
+
+    <section class="week">
+
+        <div class="week-title">
+            Week 2
         </div>
 
-        <div class="problem">
-            <div class="problem-title">2. Java Method Overriding</div>
-            <pre><code id="code14">Loading...</code></pre>
-        </div>
 
         <div class="problem">
-            <div class="problem-title">3. JavaMethodOverriding2</div>
-            <pre><code id="code15">Loading...</code></pre>
+
+            <div class="problem-title">
+                1. Java Instanceof Keyword
+            </div>
+
+            <pre><code id="week2_1" class="loading">
+Loading...
+            </code></pre>
+
         </div>
-    </div>
+
+
+        <div class="problem">
+
+            <div class="problem-title">
+                2. Java Singleton Pattern
+            </div>
+
+            <pre><code id="week2_2" class="loading">
+Loading...
+            </code></pre>
+
+        </div>
+
+
+        <div class="problem">
+
+            <div class="problem-title">
+                3. Java Static Initializer Block
+            </div>
+
+            <pre><code id="week2_3" class="loading">
+Loading...
+            </code></pre>
+
+        </div>
+
+
+        <div class="problem">
+
+            <div class="problem-title">
+                4. Salary
+            </div>
+
+            <pre><code id="week2_4" class="loading">
+Loading...
+            </code></pre>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= WEEK 3 ================= -->
+
+    <section class="week">
+
+        <div class="week-title">
+            Week 3
+        </div>
+
+
+        <div class="problem">
+
+            <div class="problem-title">
+                1. Salary Increase
+            </div>
+
+            <pre><code id="week3_1" class="loading">
+Loading...
+            </code></pre>
+
+        </div>
+
+
+        <div class="problem">
+
+            <div class="problem-title">
+                2. Salary with Bonus
+            </div>
+
+            <pre><code id="week3_2" class="loading">
+Loading...
+            </code></pre>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= WEEK 4 ================= -->
+
+    <section class="week">
+
+        <div class="week-title">
+            Week 4
+        </div>
+
+
+        <div class="problem">
+
+            <div class="problem-title">
+                1. Inheritance
+            </div>
+
+            <pre><code id="week4_1" class="loading">
+Loading...
+            </code></pre>
+
+        </div>
+
+
+        <div class="problem">
+
+            <div class="problem-title">
+                2. Java Inheritance II
+            </div>
+
+            <pre><code id="week4_2" class="loading">
+Loading...
+            </code></pre>
+
+        </div>
+
+
+        <div class="problem">
+
+            <div class="problem-title">
+                3. Java Inheritance
+            </div>
+
+            <pre><code id="week4_3" class="loading">
+Loading...
+            </code></pre>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= WEEK 5 ================= -->
+
+    <section class="week">
+
+        <div class="week-title">
+            Week 5
+        </div>
+
+
+        <div class="problem">
+
+            <div class="problem-title">
+                1. Covariant Return Types
+            </div>
+
+            <pre><code id="week5_1" class="loading">
+Loading...
+            </code></pre>
+
+        </div>
+
+
+        <div class="problem">
+
+            <div class="problem-title">
+                2. Java Method Overriding
+            </div>
+
+            <pre><code id="week5_2" class="loading">
+Loading...
+            </code></pre>
+
+        </div>
+
+
+        <div class="problem">
+
+            <div class="problem-title">
+                3. JavaMethodOverriding2
+            </div>
+
+            <pre><code id="week5_3" class="loading">
+Loading...
+            </code></pre>
+
+        </div>
+
+    </section>
 
 </div>
+
 
 <footer>
     Java Programming | Week 1 - Week 5
 </footer>
 
 
+
 <script>
 
-async function loadCode(id, file) {
+/*
+====================================================
+GITHUB INFORMATION
+====================================================
+*/
+
+const OWNER = "mdohidurrahman251-15-294";
+
+const REPO = "mdohidurrahman251-15-294";
+
+
+
+/*
+====================================================
+FILES
+====================================================
+*/
+
+const problems = [
+
+    {
+        id: "week1_3",
+        name: "251-15-569_Java Stdin and Stdout.java"
+    },
+
+    {
+        id: "week2_1",
+        name: "251-15-569_Java Instanceof Keyword.java"
+    },
+
+    {
+        id: "week2_2",
+        name: "251-15-569_Java Singleton Pattern.java"
+    },
+
+    {
+        id: "week2_3",
+        name: "251-15-569_Java Static Initializer Block.java"
+    },
+
+    {
+        id: "week2_4",
+        name: "251-15-569_Salary.java"
+    },
+
+    {
+        id: "week3_1",
+        name: "251-15-569_Salary Increase.java"
+    },
+
+    {
+        id: "week3_2",
+        name: "251-15-569_Salary with Bonus.java"
+    },
+
+    {
+        id: "week4_1",
+        name: "251-15-569_Inheritance.java"
+    },
+
+    {
+        id: "week4_2",
+        name: "251-15-569_Java Inheritance II.java"
+    },
+
+    {
+        id: "week4_3",
+        name: "251-15-569_Java Inheritance.java"
+    },
+
+    {
+        id: "week5_1",
+        name: "251-15-569_Covariant Return Types.java"
+    },
+
+    {
+        id: "week5_2",
+        name: "251-15-569_Java Method Overriding.java"
+    },
+
+    {
+        id: "week5_3",
+        name: "251-15-569_JavaMethodOverriding2.java"
+    }
+
+];
+
+
+
+/*
+====================================================
+LOAD JAVA FILES FROM GITHUB
+====================================================
+*/
+
+async function loadRepositoryFiles() {
 
     try {
 
-        const response = await fetch(file);
+        let branch = "main";
+
+        let apiURL =
+            https://api.github.com/repos/${OWNER}/${REPO}/git/trees/${branch}?recursive=1;
+
+        let response = await fetch(apiURL);
+
+
+        /*
+        If main branch does not work,
+        try master.
+        */
 
         if (!response.ok) {
-            throw new Error("File not found");
+
+            branch = "master";
+
+            apiURL =
+                https://api.github.com/repos/${OWNER}/${REPO}/git/trees/${branch}?recursive=1;
+
+            response = await fetch(apiURL);
+
         }
 
-        const text = await response.text();
 
-        document.getElementById(id).textContent = text;
+        if (!response.ok) {
+
+            throw new Error("Repository not found");
+
+        }
+
+
+        const data = await response.json();
+
+
+        /*
+        Find every Java file
+        */
+
+        for (const problem of problems) {
+
+            const file = data.tree.find(item => {
+
+                if (item.type !== "blob") {
+
+                    return false;
+
+                }
+
+                const fileName =
+                    item.path.split("/").pop();
+
+                return fileName === problem.name;
+
+            });
+
+
+            const element =
+                document.getElementById(problem.id);
+
+
+            if (!file) {
+
+                element.className = "error";
+
+                element.textContent =
+                    "Java file not found in repository.";
+
+                continue;
+
+            }
+
+
+            /*
+            GitHub raw file URL
+            */
+
+            const rawURL =
+                https://raw.githubusercontent.com/${OWNER}/${REPO}/${branch}/${file.path};
+
+
+            const codeResponse =
+                await fetch(rawURL);
+
+
+            if (!codeResponse.ok) {
+
+                element.className = "error";
+
+                element.textContent =
+                    "Unable to load this Java file.";
+
+                continue;
+
+            }
+
+
+            const code =
+                await codeResponse.text();
+
+
+            element.className = "";
+
+            element.textContent = code;
+
+        }
+
 
     } catch (error) {
 
-        document.getElementById(id).textContent =
-            "Unable to load this Java file.";
+        document
+            .querySelectorAll(".loading")
+            .forEach(element => {
+
+                element.className = "error";
+
+                element.textContent =
+                    "Unable to connect to GitHub.";
+
+            });
+
+        console.error(error);
 
     }
+
 }
 
 
-/* WEEK 1 */
-
-loadCode(
-    "code1",
-    "week-1/251-15-569_Welcome%20to%20Java.java"
-);
-
-loadCode(
-    "code2",
-    "week-1/251-15-569_if-else.java"
-);
-
-loadCode(
-    "code3",
-    "week-1/251-15-569_Java%20Stdin%20and%20Stdout.java"
-);
-
-
-/* WEEK 2 */
-
-loadCode(
-    "code4",
-    "week-2/251-15-569_Java%20Instanceof%20Keyword.java"
-);
-
-loadCode(
-    "code5",
-    "week-2/251-15-569_Java%20Singleton%20Pattern.java"
-);
-
-loadCode(
-    "code6",
-    "week-2/251-15-569_Java%20Static%20Initializer%20Block.java"
-);
-
-loadCode(
-    "code7",
-    "week-2/251-15-569_Salary.java"
-);
-
-
-/* WEEK 3 */
-
-loadCode(
-    "code8",
-    "week-3/251-15-569_Salary%20Increase.java"
-);
-
-loadCode(
-    "code9",
-    "week-3/251-15-569_Salary%20with%20Bonus.java"
-);
-
-
-/* WEEK 4 */
-
-loadCode(
-    "code10",
-    "week-4/251-15-569_Inheritance.java"
-);
-
-loadCode(
-    "code11",
-    "week-4/251-15-569_Java%20Inheritance%20II.java"
-);
-
-loadCode(
-    "code12",
-    "week-4/251-15-569_Java%20Inheritance.java"
-);
-
-
-/* WEEK 5 */
-
-loadCode(
-    "code13",
-    "week-5/251-15-569_Covariant%20Return%20Types.java"
-);
-
-loadCode(
-    "code14",
-    "week-5/251-15-569_Java%20Method%20Overriding.java"
-);
-
-loadCode(
-    "code15",
-    "week-5/251-15-569_JavaMethodOverriding2.java"
-);
+loadRepositoryFiles();
 
 </script>
 
 </body>
 </html>
+Compose
+Write to Ahm Nishan Khan
+
